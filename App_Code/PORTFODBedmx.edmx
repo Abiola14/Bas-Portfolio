@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PORTFODBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAbout">
+          <Key>
+            <PropertyRef Name="AboutId" />
+          </Key>
+          <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AboutImage" Type="nvarchar" MaxLength="100" />
+          <Property Name="AboutImageDesc" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Image1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Image1Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image1Desc" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Image2" Type="nvarchar" MaxLength="100" />
+          <Property Name="Image2Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image2Desc" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Image3" Type="nvarchar" MaxLength="100" />
+          <Property Name="Image3Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image3Desc" Type="nchar" MaxLength="2000" />
+          <Property Name="Image4" Type="nvarchar" MaxLength="100" />
+          <Property Name="image4Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image4Desc" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CreatedDate" Type="date" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="ModfiedDate" Type="date" />
+          <Property Name="ModifiedBy" Type="int" />
+        </EntityType>
+        <EntityContainer Name="PORTFODBModelStoreContainer">
+          <EntitySet Name="tblAbout" EntityType="Self.tblAbout" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PORTFODBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblAbout">
+          <Key>
+            <PropertyRef Name="AboutId" />
+          </Key>
+          <Property Name="AboutId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AboutImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AboutImageDesc" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Image1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Image1Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image1Desc" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Image2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Image2Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image2Desc" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Image3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Image3Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image3Desc" Type="String" MaxLength="2000" FixedLength="true" Unicode="true" />
+          <Property Name="Image4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="image4Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Image4Desc" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="ModfiedDate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedBy" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="PORTFODBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAbouts" EntityType="Self.tblAbout" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PORTFODBModelStoreContainer" CdmEntityContainer="PORTFODBEntities">
+          <EntitySetMapping Name="tblAbouts">
+            <EntityTypeMapping TypeName="PORTFODBModel.tblAbout">
+              <MappingFragment StoreEntitySet="tblAbout">
+                <ScalarProperty Name="AboutId" ColumnName="AboutId" />
+                <ScalarProperty Name="AboutImage" ColumnName="AboutImage" />
+                <ScalarProperty Name="AboutImageDesc" ColumnName="AboutImageDesc" />
+                <ScalarProperty Name="Image1" ColumnName="Image1" />
+                <ScalarProperty Name="Image1Name" ColumnName="Image1Name" />
+                <ScalarProperty Name="Image1Desc" ColumnName="Image1Desc" />
+                <ScalarProperty Name="Image2" ColumnName="Image2" />
+                <ScalarProperty Name="Image2Name" ColumnName="Image2Name" />
+                <ScalarProperty Name="Image2Desc" ColumnName="Image2Desc" />
+                <ScalarProperty Name="Image3" ColumnName="Image3" />
+                <ScalarProperty Name="Image3Name" ColumnName="Image3Name" />
+                <ScalarProperty Name="Image3Desc" ColumnName="Image3Desc" />
+                <ScalarProperty Name="Image4" ColumnName="Image4" />
+                <ScalarProperty Name="image4Name" ColumnName="image4Name" />
+                <ScalarProperty Name="Image4Desc" ColumnName="Image4Desc" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModfiedDate" ColumnName="ModfiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
